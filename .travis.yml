@@ -1,4 +1,10 @@
 language: java
 jdk: oraclejdk8
 sudo: false
-script: mvn clean verify
+
+cache:
+  yarn: true
+  directories:
+    - $HOME/.m2
+
+script: ./mvnw clean verify
